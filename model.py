@@ -110,3 +110,6 @@ if __name__ == '__main__':
     # db.session.add_all([u1,u2,u3])
     # db.session.commit()
     print("hiiiiiiiiiiuiiiiiiiiii")
+    print("hiiiiiiiiiiuiiiiiiiiii")
+    print("hiiiiiiiiiiuiiiiiiiiii")
+
