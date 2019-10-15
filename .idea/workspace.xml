@@ -23,11 +23,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="width" value="1333" />
+    <option name="height" value="447" />
+  </component>
   <component name="ProjectId" id="1SEHjzFpUv9zgKiomnjrun3Bu31" />
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="E:/ENVIRNOMENT/JANGO/jangocrud/crudoperation" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/env" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
