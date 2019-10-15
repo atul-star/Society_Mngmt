@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+        <head>
+			 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>PROPERTY INFO</title>
+    <!-- Bootstrap CSS file -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        </head>
+    <body>
+     <!-- JS files: jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-----------------Nav bar start------------>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand text-center" href="#">PROPERTY INFORMATION</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+    <!-----NAV END------>
+
+    <!-----------slider  end------->
+     <br>
+     <div class="alert alert-success text-center" role="alert">
+         {{pmsg}}
+
+</div>
+
+    <div class="container">
+        <div class="card">
+        <div class="md-6">
+            <form action="http://127.0.0.1:5000/property/save/" method="post">
+  <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>ID</label>
+      <input type="text" class="form-control" name="pid" placeholder="Id"  value="{{prop.Pid}}" readonly>
+    </div>
+    <div class="form-group col-md-4">
+      <label >NAME</label>
+      <input type="text" class="form-control" name="pname" value="{{prop.PName}}" placeholder="Name">
+    </div>
+  </div>
+    <div class="form-row">
+    <div class="form-group col-md-4">
+      <label >ADDRESS</label>
+      <input type="text" class="form-control" name="paddress" value="{{prop.PAddress}}" placeholder="address">
+    </div>
+    <div class="form-group col-md-4">
+      <label>LANDMARK</label>
+      <input type="text" class="form-control" name="plandmark" value="{{prop.PLandmark}}" placeholder="owner">
+    </div>
+  </div>
+      <div class="form-row">
+    <div class="form-group col-md-4">
+      <label>CITY</label>
+      <input type="text" class="form-control" name="pcity" value="{{prop.PCity}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>STATE</label>
+      <input type="text" class="form-control" name="pstate" value="{{prop.PState}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>COUNRTY</label>
+      <input type="text" class="form-control" name="pcountry" value="{{prop.PCounrty}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>ZIP_CODE</label>
+      <input type="text" class="form-control" name="pzip" value="{{prop.PZip_Code}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>POC</label>
+      <input type="text" class="form-control" name="ppoc" value="{{prop.Poc}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>EMAIL</label>
+      <input type="text" class="form-control" name="pemail" value="{{prop.PEmail}}" placeholder="POC">
+    </div>
+    <div class="form-group col-md-4">
+      <label>MOBILE</label>
+      <input type="text" class="form-control" name="pmobile" value="{{prop.PMobile_No}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>TEL_NO</label>
+      <input type="text" class="form-control" name="ptel" value="{{prop.PTel_No}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>WEBSIT</label>
+      <input type="text" class="form-control" name="pwebsite" value="{{prop.PWebsite}}" placeholder="POC">
+    </div>
+     <div class="form-group col-md-4">
+      <label>PAYMENT|PORTAL</label>
+      <input type="text" class="form-control" name="ppayment" value="{{prop.Payment_Portal}}" placeholder="POC">
+    </div>
+     <!-- <li class="nav-item dropdown bg-success">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          IS_ACTIVE
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" name="yes" >YES</a>
+          <a class="dropdown-item" name="no" >NO</a>
+          </div>
+      </li>------>
+  </div>
+  <button type="submit" class="btn btn-primary">SAVE</button>
+</form>
+        </div>
+        </div>
+
+        <!------------form end------->
+        <br><br>
+        <table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">ADDRESS</th>
+        <th scope="col">LANDMARK</th>
+        <th scope="col">CITY</th>
+        <th scope="col">STATE</th>
+        <th scope="col">COUNTRY</th>
+        <th scope="col">ZIP_CODE</th>
+        <th scope="col">POC</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">MOBILE</th>
+        <th scope="col">TEL_NO</th>
+        <th scope="col">WEBSITE</th>
+        <th scope="col">PAYMENT</th>
+        <th scope="col">IS_ACTIVE</th>
+        <th scope="col">ACTIONS</th>
+
+    </tr>
+  </thead>
+   {% for prop in properties  %}
+  <tbody>
+     <tbody>
+            <td>{{prop.Pid}}</td>
+            <td>{{prop.PName}}</td>
+            <td>{{prop.PAddress}}</td>
+            <td>{{prop.PLandmark}}</td>
+            <td>{{prop.PCity}}</td>
+            <td>{{prop.PState}}</td>
+            <td>{{prop.PCounrty}}</td>
+            <td>{{prop.PZip_Code}}</td>
+            <td>{{prop.Poc}}</td>
+            <td>{{prop.PEmail}}</td>
+            <td>{{prop.PMobile_No}}</td>
+            <td>{{prop.PTel_No}}</td>
+            <td>{{prop.PWebsite}}</td>
+            <td>{{prop.Payment_Portal}}</td>
+            <td>{{prop.PIs_Active}}</td>
+            <td><a href="{{'/property/edit/%s'%prop.Pid}}">EDIT</a></td>
+            <td><a href="{{'/property/delete/%s'%prop.Pid}}">DELETE</a></td>
+            </tbody>
+  </tbody>
+    {% endfor %}
+</table>
+
+    </div>
+
+    <!----------table end------->
+<footer class="bg-danger">
+    <div>
+        <h2 class="text-center">Welcome to PROPERTY</h2>
+    </div>
+</footer>
+
+    </body>
+</html>
+
+
+
+<!-----------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Property_Info</title>
+</head>
+<body>
+    {{pmsg}}
+    <form action="http://127.0.0.1:5000/property/save/" method="post"><br>
+     PID:<input type="text" name="pid" value="{{prop.id}}" readonly><br><br>
+     PNAME:<input type="text" name="pname" value="{{prop.name}}"><br><br>
+     PADDRESS:<input type="text" name="paddress" value="{{prop.address}}"><br><br>
+     POWNER:<input type="text" name="powner" value="{{prop.owner}}"><br><br>
+     PPOC:<input type="text" name="ppoc" value="{{prop.POC}}"><br><br>
+     PDESC:<input type="text" name="pdesc" value="{{prop.description}}"><br><br>
+     WEBSITE:<input type="text" name="pweb" value="{{prop.website}}"><br><br>
+            <input type="submit">
+    </form>
+    <br><br>
+    <table>
+        <thead>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>ADDRESS</td>
+            <td>OWNER</td>
+            <td>POC</td>
+            <td>DESC</td>
+            <td>WEBSITE</td>
+            <td>ACTIONS</td>
+        </thead>
+        {% for prop in properties %}
+        <tbody>
+            <td>{{prop.id}}</td>
+            <td>{{prop.name}}</td>
+            <td>{{prop.address}}</td>
+            <td>{{prop.owner}}</td>
+            <td>{{prop.POC}}</td>
+            <td>{{prop.description}}</td>
+            <td>{{prop.website}}</td>
+            <td>
+                <a href="/property/edit/{{prop.id}}">EDIT</a>|
+                <a href="/property/delete/{{prop.id}}">DELETE</a>
+            </td>
+        </tbody>
+        {% endfor %}
+
+    </table>
+
+</body>
+</html>
+---------->

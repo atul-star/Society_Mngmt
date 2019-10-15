@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tenant Information</title>
+</head>
+<body>
+    <p style="text-align:center;">{{tmsg}}</p>
+    <form action="http://localhost:5000/resident/save/" method="post">
+        Tenant ID  : <input type="text" name="tid" value="{{tenantob.id}}" readonly> <br><br>
+        Tenant Name  : <input type="text" name="tname" value="{{tenantob.name}}"><br><br>
+        Unit_NO  : <select name="uid">
+                    {{unit1}}
+                    {% for un1 in unit1%}
+                         <option value="{{un1.id}}">{{un1.id}}</option>
+                    {% endfor %}
+                   </select><br><br>
+        Is_Owner  : <input type="text" name="tisowner" value="{{tenantob.is_owner}}"><br><br>
+        Lease  : <input type="text" name="tlease" value="{{tenantob.lease}}"><br><br>
+        From And To  : <input type="text" name="tfromandto" value="{{tenantob.fromandto}}"><br><br>
+        Move_in  : <input type="date" name="tmovein" value="{{tenantob.MOVE_IN}}" hidden="true"><br><br>
+        Move_out  : <input type="date" name="tmoveout" value="{{tenantob.MOVE_OUT}}" hidden="true"><br><br>
+        Status  : <select name="tstatus" value="{{tenantob.status}}">
+                                <option value="Current">Current</option>
+                                <option value="Past">Past</option>
+                                <option value="Notice">Notice</option>
+                  </select><br><br>
+        Roomates  : <input type="text" name="troomates" value="{{tenantob.roomates}}"><br><br>
+        Mobile_No  : <input type="text" name="tmobile" value="{{tenantob.mobile}}"><br><br>
+        Documents  : <input type="text" name="tdocuments" value="{{tenantob.documents}}"><br><br>
+        IS Reference  : <input type="text" name="treference" value="{{tenantob.reference}}"><br><br>
+        Email  : <input type="text" name="temail" value="{{tenantob.email}}"><br><br>
+        Rent  : <input type="text" name="trent" value="{{tenantob.rent}}"><br><br>
+        Lease_sign_date  : <input type="date" name="tleasesigndate" value="{{tenantob.LEASE_SIGN_DATE}}" hidden="true"><br><br>
+        Address  : <input type="text" name="taddress" value="{{tenantob.address}}"><br><br>
+        PAN_Card  : <input type="text" name="tpancard" value="{{tenantob.pan_card}}"><br><br>
+        AADHAR_Card  : <input type="text" name="taadharcard" value="{{tenantob.aadhar_card}}"><br><br>
+
+            <input type="submit" value="Save">
+        <br>
+
+    </form>
+    <br><br>
+
+    <table border="1">
+        <thead>
+            <td>ID</td>
+            <td>NAME</td>
+            <td>UNIT_NO</td>
+            <td>IS_OWNER</td>
+            <td>LEASE</td>
+            <td>FROM_AND_TO</td>
+            <td>MOVE_IN</td>
+            <td>MOVE_OUT</td>
+            <td>STATUS</td>
+            <td>ROOMATES</td>
+            <td>MOBILE_NO</td>
+            <td>DOCUMENTS</td>
+            <td>REFERENCE</td>
+            <td>EMAIL</td>
+            <td>RENT</td>
+            <td>LEASE_SIGN_DATE</td>
+            <td>ADDRESS</td>
+            <td>PAN_CARD_NO</td>
+            <td>AADHAR_CARD_NO</td>
+
+
+        </thead>
+        {% for tann in tenant %}
+            <tbody>
+                <td>{{tann.id}}</td>
+                <td>{{tann.name}}</td>
+                <td>{{tann.uid}}</td>
+                <td>{{tann.is_owner}}</td>
+                <td>{{tann.lease}}</td>
+                <td>{{tann.fromandto}}</td>
+                <td>{{tann.MOVE_IN}}</td>
+                <td>{{tann.MOVE_OUT}}</td>
+                <td>{{tann.status}}</td>
+                <td>{{tann.roomates}}</td>
+                <td>{{tann.mobile}}</td>
+                <td>{{tann.documents}}</td>
+                <td>{{tann.reference}}</td>
+                <td>{{tann.email}}</td>
+                <td>{{tann.rent}}</td>
+                <td>{{tann.LEASE_SIGN_DATE}}</td>
+                <td>{{tann.address}}</td>
+                <td>{{tann.pan_card}}</td>
+                <td>{{tann.aadhar_card}}</td>
+
+                <td>
+                    <a href="/resident/edit/{{tann.id}}"> EDIT </a>|
+                    <a href="/resident/delete/{{tann.id}}"> DELETE </a>
+                </td>
+            </tbody>
+        {%endfor%}
+    </table>
+
+
+
+</body>
+</html>
