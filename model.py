@@ -66,7 +66,7 @@ class Unit(db.Model):
     tenant = db.relationship('Tenant', backref='unit', lazy=False, uselist=True)
     # unit_types = db.Column('ut_id', db.Integer,
     #                 db.ForeignKey('unit_types.UT_id'),
-    #                 nullable=True)
+    #                 nullable=True).
     def __str__(self):
         return 'unit_id={},' \
                'unit_name={}'.format(self.id,self.udesc)
@@ -100,9 +100,9 @@ class Tenant(db.Model):
 
 if __name__ == '__main__':
     db.create_all()
-    l = Login(Email="email@prop.com", id=12345)
-    db.session.add(l)
-    db.session.commit()
+    # l = Login(Email="email@prop.com", id=12345)
+    # db.session.add(l)
+    # db.session.commit()
 
     # u1=Unit(id=104,udesc='rrrr is avl')
     # u2 = Unit(id=105, udesc='sssss is avl')
