@@ -109,8 +109,4 @@ if __name__ == '__main__':
     # u3 = Unit(id=106, udesc='yyyyy is avl')
     # db.session.add_all([u1,u2,u3])
     # db.session.commit()
-    print("hiiiiiiiiiiuiiiiiiiiii")
-    print("hiiiiiiiiiiuiiiiiiiiii")
-    print("hiiiiiiiiiiuiiiiiiiiii")
-    print("hiii Atul ")
-    print('ssss')
+
