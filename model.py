@@ -99,7 +99,7 @@ class Tenant(db.Model):
     uid = db.Column('unit_id', db.Integer, db.ForeignKey('unit.id'), nullable=True)
 
 if __name__ == '__main__':
-    # db.create_all()
+    db.create_all()
     # l = Login(Email="email@prop.com", id=12345)
     # db.session.add(l)
     # db.session.commit()
