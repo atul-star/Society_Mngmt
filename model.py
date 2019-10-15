@@ -101,7 +101,7 @@ class Tenant(db.Model):
 if __name__ == '__main__':
     # db.create_all()
     l = Login(Email="email@prop.com", id=12345)
-    # db.session.add(l)
+    db.session.add(l)
     db.session.commit()
     #
     # u1=Unit(id=104,udesc='rrrr is avl')
