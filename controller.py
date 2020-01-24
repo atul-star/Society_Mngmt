@@ -1,7 +1,7 @@
 from model import *
 from flask import request,render_template
 
-
+#dfdfdjkhdfkjghdfkjghjkdfhgkjdfhgjkhdfkjghdfjkghjkdfhg
 @app.route('/landing/page/')
 def landing_page():
     return render_template('main.html')
