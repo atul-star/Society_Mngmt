@@ -185,7 +185,7 @@ def delete_info(tid):
     return render_template('tenant.html',
                            tenantob=tanentinstance,
                            tenant=Tenant.query.all(),tmsg=msg)
-
+'nlefjliwheflksnddddddnnvnkldjfqwhdiuyqwiduhasknlkqhdoiqwjdilqjwldknas'
 
 
 if __name__ == '__main__':
